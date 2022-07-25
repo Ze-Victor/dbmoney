@@ -1,0 +1,13 @@
+.containerHeader {
+  position: absolute;
+  height: 90px;
+  width: calc(100vw - 383px);
+  right: 0px;
+  left: 383px;
+  top: 0px;
+  background-color: #252422;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.marginTitle {
+  margin-left: 48px;
+}

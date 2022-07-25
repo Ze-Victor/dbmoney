@@ -1,0 +1,15 @@
+.inputComponent {
+  width: 414px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 15px;
+  border: none;
+  margin-top: 63px;
+
+  font-family: "Comfortaa";
+  font-style: normal;
+  padding-left: 10px;
+  font-size: 20px;
+  line-height: 22px;
+  color: #8b8c89;
+}

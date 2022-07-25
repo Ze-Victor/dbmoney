@@ -1,0 +1,9 @@
+.containerBar {
+  position: absolute;
+  width: 380px;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: #252422;
+  border-right: 3px solid #70e000;
+}

@@ -1,0 +1,14 @@
+button {
+  width: 415px;
+  height: 49px;
+  padding: 11px 157.5px;
+  background-color: #70e000;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 30px;
+}
