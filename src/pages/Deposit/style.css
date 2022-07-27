@@ -1,0 +1,20 @@
+.containerDeposit {
+  display: flex;
+  flex-direction: row;
+  background-color: #343a40;
+}
+.leftComponents {
+  height: calc(100vh - 90px);
+  width: calc(100vw - 20%);
+  position: absolute;
+  top: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.containerButtons {
+  display: flex;
+  gap: 42px;
+}
