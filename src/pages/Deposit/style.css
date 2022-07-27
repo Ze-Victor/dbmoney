@@ -16,5 +16,10 @@
 }
 .containerButtons {
   display: flex;
-  gap: 42px;
+  margin-top: 15px;
+  gap: 30px;
+}
+.titleValue {
+  color: #fff;
+  font-size: 20px;
 }

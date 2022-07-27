@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
+import { ButtonLarge } from "../../components/Button";
 import "./style.css";
 
 export const Login = () => {
@@ -18,7 +18,7 @@ export const Login = () => {
           <label>Salvar credenciais</label>
         </div>
 
-        <Button textButton="Acessar" />
+        <ButtonLarge textButton="Acessar" />
 
         <div className="registerLink">
           Ainda não possui conta?{" "}
