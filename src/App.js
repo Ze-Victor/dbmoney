@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import { AccountConfigurations } from "./pages/AccountConfigurations";
+import { Register } from "./pages/Register";
 import { Deposit } from "./pages/Deposit";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
