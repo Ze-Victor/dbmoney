@@ -1,0 +1,33 @@
+.containerPageRegister {
+    background-color: #343a40;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;    
+}
+
+.container-sm {
+    background-color: #000000;
+    border-radius: 20px;
+}
+
+.checkboxRegister {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #8b8c89;
+}
+
+.checkboxRegister label {
+    margin-left: 10px;
+}
