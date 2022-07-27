@@ -1,10 +1,12 @@
 import "./App.css";
-import { Login } from "./pages/Login";
+import { AccountConfigurations } from "./pages/AccountConfigurations";
+import { Deposit } from "./pages/Deposit";
+import { Login } from "./pages/Deposit";
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <AccountConfigurations />
     </div>
   );
 }
