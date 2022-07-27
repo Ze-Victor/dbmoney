@@ -4,7 +4,6 @@ import { AccountConfigurations } from "./pages/AccountConfigurations";
 import { Register } from "./pages/Register";
 import { Deposit } from "./pages/Deposit";
 import { Login } from "./pages/Login";
-import { Register } from "./pages/Register";
 import { Dashboard } from "./pages/Dashboard";
 import { Statement } from "./pages/Statement";
 
