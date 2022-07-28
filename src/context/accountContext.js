@@ -46,6 +46,7 @@ export const AccountProvider = ({ children }) => {
         accounts[index].saldo += value;
       }
     });
+    console.log(accounts);
   };
 
   const pix = (cpfSender, cpfRecipient, value) => {
