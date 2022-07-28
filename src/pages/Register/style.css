@@ -31,3 +31,8 @@
 .checkboxRegister label {
     margin-left: 10px;
 }
+
+.error {
+    color: rgb(219, 39, 39);
+    font-weight: bold;
+}
