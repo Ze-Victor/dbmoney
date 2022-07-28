@@ -38,7 +38,6 @@ export const AccountProvider = ({ children }) => {
       numeroConta: "123456789-0",
       saldo: 0,
     });
-    console.log(user);
   };
 
   const deposit = (cpf, value) => {
