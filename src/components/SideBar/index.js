@@ -15,10 +15,10 @@ export const SideBar = (props) => {
   return (
     <div className="sidebar">
       <div className="avatar">
-        <div className="user-pic">{props.name[0]}</div>
+        <div className="user-pic">N</div>
         <div className="user-infos">
-          <p className="user-name">{props.name}</p>
-          <p className="user-account">{props.cpf}</p>
+          <p className="user-name">NOME</p>
+          <p className="user-account">1213215</p>
         </div>
       </div>
       <button className="active" onClick={() => navigation("/dashboard")}>

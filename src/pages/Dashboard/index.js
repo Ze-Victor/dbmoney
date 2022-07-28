@@ -9,14 +9,14 @@ export const Dashboard = () => {
   const context = useContext(AccountContext);
 
   let balance = 0;
-  let name = "";
 
   context.accounts.forEach((account, index) => {
     if (context.userLogged === account.cpf) {
       balance = account.saldo;
-      name = context.user[index].nome;
     }
   });
+
+  console.log(context);
 
   const [dataAccountUserLogged, setDataAccountUserLogged] = useState([
     {
@@ -37,7 +37,7 @@ export const Dashboard = () => {
 
   return (
     <div className="containerDashboard">
-      <SideBar cpf={context.userLogged} name={name} />
+      <SideBar />
       <div>
         <Header title="Dashboard" />
         <div className="content">
