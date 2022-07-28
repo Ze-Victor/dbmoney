@@ -33,7 +33,7 @@ export const SideBar = () => {
         <img src={ExtratoIcon} alt="Extrato icon" class="icon-sidebar" />
         Extrato
       </button>
-      <button onClick={() => navigation("/dashboard")}>
+      <button onClick={() => navigation("/pix")}>
         <img src={PixIcon} alt="Pix icon" class="icon-sidebar" />
         Pix
       </button>
