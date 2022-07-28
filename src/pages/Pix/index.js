@@ -11,9 +11,11 @@ import { AccountContext } from "../../context/accountContext";
 export const Pix = () => {
   const context = useContext(AccountContext);
 
+  console.log(context);
+
   const sendPix = (e, formPixRecived) => {
-    console.log(formPixRecived);
-    console.log(context.userLogged);
+    e.preventDefault();
+    context.pix(context.userLogged, formPixRecived.chave, formPixRecived.value);
   };
 
   const [formPix, setFormPix] = useState([]);
@@ -27,7 +29,7 @@ export const Pix = () => {
           <div className="containerInput">
             <h1 className="titleValue">Chave Pix:</h1>
             <Input
-              type="number"
+              type="text"
               placeholder="Chave"
               name="chave"
               onChange={(e) => {

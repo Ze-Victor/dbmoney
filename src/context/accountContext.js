@@ -14,13 +14,13 @@ export const AccountProvider = ({ children }) => {
       password: "12345678",
     },
   ]);
-  const accounts = [
+  const [accounts, setAccounts] = useState([
     {
       cpf: "485164613-48",
       numeroConta: "123456789-0",
       saldo: 0,
     },
-  ];
+  ]);
 
   const [userLogged, setUserLogged] = useState({ cpf: "" });
 
@@ -34,12 +34,13 @@ export const AccountProvider = ({ children }) => {
       endereco: newUser.endereco,
       password: newUser.password,
     };
-    setUser([...user, userRecived]);
-    accounts.push({
+    const newAccount = {
       cpf: newUser.cpf,
       numeroConta: "123456789-0",
       saldo: 0,
-    });
+    };
+    setUser([...user, userRecived]);
+    setAccounts([...accounts, newAccount]);
   };
 
   const loginUser = (cpf) => {
@@ -56,8 +57,12 @@ export const AccountProvider = ({ children }) => {
 
   const pix = (cpfSender, cpfRecipient, value) => {
     accounts.forEach((account, index) => {
-      if (account.cpf === cpfSender) accounts[index].saldo -= value;
-      else if (account.cpf === cpfRecipient) accounts[index].saldo += value;
+      if (account.cpf === cpfSender && account.saldo >= value) {
+        accounts[index].saldo -= parseFloat(value);
+      }
+      if (account.cpf === cpfRecipient) {
+        accounts[index].saldo += parseFloat(value);
+      }
     });
   };
 

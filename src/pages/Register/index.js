@@ -24,50 +24,54 @@ export const Register = () => {
   ];
 
   const context = useContext(AccountContext);
-  
+
   const [registerForm, setRegisterForm] = useState([
     {
-      nome: '',
-      cpf: '',
-      telefone: '',
-      email: '',
-      dataNascimento: '',
-      endereco: '',
-      password: '',
-      confir_senha: ''
-    }
+      nome: "",
+      cpf: "",
+      telefone: "",
+      email: "",
+      dataNascimento: "",
+      endereco: "",
+      password: "",
+      confir_senha: "",
+    },
   ]);
 
-  const [ errors, setErrors ] = useState({});
+  const [errors, setErrors] = useState({});
   function setError(name, error) {
-    setErrors(prevErrors => ({ ...prevErrors, [name]: error }))
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: error }));
   }
 
   function check(value, validateFunc, name) {
-    const error = validateFunc(value)
-    setError(name, error)
-    return error === null
+    const error = validateFunc(value);
+    setError(name, error);
+    return error === null;
   }
 
   function checkPassword(value1, value2, validateFunc, name) {
-    const error = validateFunc(value1, value2)
-    setError(name, error)
-    return error === null
+    const error = validateFunc(value1, value2);
+    setError(name, error);
+    return error === null;
   }
 
   function submit(e) {
-    e.preventDefault()
-    const formOk = 
-        Object.keys(registerForm[0])
-        .map(key => check(registerForm[key], required, key))
-        .every(f => f);
+    e.preventDefault();
+    const formOk = Object.keys(registerForm[0])
+      .map((key) => check(registerForm[key], required, key))
+      .every((f) => f);
 
-    const passwordOk = checkPassword(registerForm['password'], registerForm['confir_senha'], isEquals, 'confir_senha');
+    const passwordOk = checkPassword(
+      registerForm["password"],
+      registerForm["confir_senha"],
+      isEquals,
+      "confir_senha"
+    );
 
     if (formOk) {
-      if(passwordOk) {
+      if (passwordOk) {
         registerUser(e, registerForm);
-        alert('CADASTRO REALIZADO COM SUCESSO');
+        alert("CADASTRO REALIZADO COM SUCESSO");
         navigation("/");
       }
     }
@@ -106,7 +110,7 @@ export const Register = () => {
                           changeField(e, setRegisterForm, registerForm);
                         }}
                       />
-                      <div className="error">{ errors[item[0]] }</div>
+                      <div className="error">{errors[item[0]]}</div>
                     </div>
                   );
                 })}
@@ -120,10 +124,7 @@ export const Register = () => {
               <input type="checkbox" />
               <label>Li e concordo com os termos de uso.</label>
             </div>
-            <ButtonLarge
-              textButton="Cadastrar"
-              onClick={(e) => submit(e)}
-            />
+            <ButtonLarge textButton="Cadastrar" onClick={(e) => submit(e)} />
           </div>
         </div>
       </div>

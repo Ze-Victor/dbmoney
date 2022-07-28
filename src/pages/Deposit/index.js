@@ -13,7 +13,7 @@ export const Deposit = () => {
 
   const registerDeposit = (e, value) => {
     e.preventDefault();
-    context.deposit("485164613-48", value);
+    context.deposit(context.userLogged, value);
   };
 
   const [deposito, setDeposito] = useState([]);
