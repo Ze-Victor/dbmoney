@@ -11,8 +11,6 @@ import { AccountContext } from "../../context/accountContext";
 export const Pix = () => {
   const context = useContext(AccountContext);
 
-  console.log(context);
-
   const sendPix = (e, formPixRecived) => {
     e.preventDefault();
     context.pix(context.userLogged, formPixRecived.chave, formPixRecived.value);

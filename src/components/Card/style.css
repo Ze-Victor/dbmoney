@@ -1,5 +1,14 @@
-.containerCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-sm {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 50px 50px;
+  margin: 10px 20px 10px 20px;
+  width: 80%;
+}
+.card-md {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 50px 50px;
+  margin: 10px 20px 10px 20px;
+  width: 80%;
 }

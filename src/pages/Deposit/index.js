@@ -14,6 +14,7 @@ export const Deposit = () => {
   const registerDeposit = (e, value) => {
     e.preventDefault();
     context.deposit(context.userLogged, value);
+    alert("DEPOSITO REALIZADO COM SUCESSO!")
   };
 
   const [deposito, setDeposito] = useState([]);
