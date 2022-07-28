@@ -22,6 +22,8 @@ export const AccountProvider = ({ children }) => {
     },
   ];
 
+  const [userLogged, setUserLogged] = useState({ cpf: "" });
+
   const addUser = (newUser) => {
     const userRecived = {
       nome: newUser.nome,
@@ -40,13 +42,16 @@ export const AccountProvider = ({ children }) => {
     });
   };
 
+  const loginUser = (cpf) => {
+    setUserLogged(cpf);
+  };
+
   const deposit = (cpf, value) => {
     accounts.forEach((account, index) => {
       if (account.cpf === cpf) {
-        accounts[index].saldo += value;
+        accounts[index].saldo += parseFloat(value);
       }
     });
-    console.log(accounts);
   };
 
   const pix = (cpfSender, cpfRecipient, value) => {
@@ -57,7 +62,9 @@ export const AccountProvider = ({ children }) => {
   };
 
   return (
-    <AccountContext.Provider value={{ user, accounts, addUser, deposit, pix }}>
+    <AccountContext.Provider
+      value={{ user, accounts, addUser, deposit, pix, userLogged, loginUser }}
+    >
       {children}
     </AccountContext.Provider>
   );

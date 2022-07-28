@@ -24,7 +24,10 @@ export const Login = () => {
     });
 
     if (loginValid === false) alert("CPF E/OU SENHA INCORRETOS!");
-    else navigate("/dashboard");
+    else {
+      context.loginUser(formLogin.cpf);
+      navigate("/dashboard");
+    }
   };
 
   const [formLogin, setFormLogin] = useState([]);
