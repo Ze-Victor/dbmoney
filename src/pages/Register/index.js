@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { changeField } from "../../utils/validations";
 import { Input } from "../../components/Input";
 import { ButtonLarge } from "../../components/ButtonLarge";
 import "./style.css";
+import { AccountContext } from "../../context/accountContext";
 
 export const Register = () => {
   const firstCol = [
@@ -12,13 +13,29 @@ export const Register = () => {
     ["email", "Email"],
   ];
   const secondCol = [
-    ["data_nasc", "Data de nascimento*"],
+    ["dataNascimento", "Data de nascimento*"],
     ["endereco", "Endereço*"],
-    ["senha", "Senha*"],
+    ["password", "Senha*"],
     ["confir_senha", "Confirmar senha*"],
   ];
 
   const [registerForm, setRegisterForm] = useState([]);
+
+  const context = useContext(AccountContext);
+
+  const registerUser = (e, registerUser) => {
+    e.preventDefault();
+    const newUser = {
+      nome: registerUser.nome,
+      cpf: registerUser.cpf,
+      telefone: registerUser.telefone,
+      email: registerUser.email,
+      dataNascimento: registerUser.dataNascimento,
+      endereco: registerUser.endereco,
+      password: registerUser.password,
+    };
+    context.addUser(newUser);
+  };
 
   return (
     <div className="containerPageRegister">
@@ -54,9 +71,7 @@ export const Register = () => {
             </div>
             <ButtonLarge
               textButton="Cadastrar"
-              onClick={(e) => {
-                alert(registerForm["nome"]);
-              }}
+              onClick={(e) => registerUser(e, registerForm)}
             />
           </div>
         </div>
