@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { changeField } from "../../utils/validations";
 import { ButtonLarge } from "../../components/ButtonLarge";
@@ -7,19 +8,23 @@ import "./style.css";
 import { AccountContext } from "../../context/accountContext";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
   const context = useContext(AccountContext);
 
   const userData = context.user;
 
   const login = () => {
-    userData.forEach((user) => {
+    let loginValid = false;
+    userData.map((user) => {
       if (user.cpf === formLogin.cpf && user.password === formLogin.senha) {
-        alert("USUÁRIO LOGADO!");
-        return;
+        loginValid = true;
       }
+      return loginValid;
     });
 
-    alert("CPF E/OU SENHA INCORRETOS!");
+    if (loginValid === false) alert("CPF E/OU SENHA INCORRETOS!");
+    else navigate("/dashboard");
   };
 
   const [formLogin, setFormLogin] = useState([]);
