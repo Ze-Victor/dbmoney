@@ -7,7 +7,11 @@ import PixIcon from "../../icons/pix.png";
 import RecargaIcon from "../../icons/recarga.png";
 import TransferenciaIcon from "../../icons/transferencia.png";
 
+import { useNavigate } from "react-router-dom";
+
 export const SideBar = () => {
+  const navigation = useNavigate();
+
   return (
     <div class="sidebar">
       <div class="avatar">
@@ -17,40 +21,44 @@ export const SideBar = () => {
           <p class="user-account">123456789-0</p>
         </div>
       </div>
-      <a class="active" href="dashboard">
+      <button class="active" onClick={() => navigation("/dashboard")}>
         <img src={DashboardIcon} alt="Dashboard icon" class="icon-sidebar" />
         Dashboard
-      </a>
-      <a href="deposit">
+      </button>
+      <button onClick={() => navigation("/deposit")}>
         <img src={DepositoIcon} alt="Deposito icon" class="icon-sidebar" />
         Depósito
-      </a>
-      <a href="statement">
+      </button>
+      <button onClick={() => navigation("/statement")}>
         <img src={ExtratoIcon} alt="Extrato icon" class="icon-sidebar" />
         Extrato
-      </a>
-      <a href="dashboard">
+      </button>
+      <button onClick={() => navigation("/dashboard")}>
         <img src={PixIcon} alt="Pix icon" class="icon-sidebar" />
         Pix
-      </a>
-      <a href="dashboard">
+      </button>
+      <button onClick={() => navigation("/dashboard")}>
         <img src={RecargaIcon} alt="Recarga icon" class="icon-sidebar" />
         Recarga
-      </a>
-      <a href="dashboard">
+      </button>
+      <button onClick={() => navigation("/dashboard")}>
         <img
           src={TransferenciaIcon}
           alt="Transferencia icon"
           class="icon-sidebar"
         />
         Transferência
-      </a>
+      </button>
 
       <h3 class="section-sidebar">GERENCIAMENTO</h3>
-      <a href="accountconfigurations">Configurações da Conta</a>
-      <a href="dashboard">Atendimento ao Cliente</a>
+      <button onClick={() => navigation("/accountconfigurations")}>
+        Configurações da Conta
+      </button>
+      <button onClick={() => navigation("/dashboard")}>
+        Atendimento ao Cliente
+      </button>
       <h3 class="section-sidebar">
-        <a href="/">SAIR</a>
+        <button onClick={() => navigation("/")}>SAIR</button>
       </h3>
     </div>
   );

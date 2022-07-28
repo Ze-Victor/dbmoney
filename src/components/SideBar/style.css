@@ -67,19 +67,20 @@
   background-color: #252422;
 }
 
-.sidebar a {
+.sidebar button {
   display: flex;
   align-items: center;
   color: #8b8c89;
   font-size: 14px;
   text-decoration: none;
+  background-color: #252422;
 }
 
-.sidebar a.active {
+.sidebar button.active {
   color: white;
 }
 
-.sidebar a:hover:not(.active) {
+.sidebar button:hover:not(.active) {
   color: white;
 }
 
