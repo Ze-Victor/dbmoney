@@ -9,6 +9,14 @@ export const Statement = () => {
             <SideBar />
             <div>
                 <Header title="Extrato" />
+                <div className="content">
+                    <div className="title">
+                        Transações
+                        <div className="selectByDate">
+                            Período do Extrato
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

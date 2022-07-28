@@ -66,8 +66,8 @@ export const Register = () => {
 
     if (formOk) {
       if(passwordOk) {
-        // context.save
-        alert('LOGIN REALIZADO COM SUCESSO');
+        registerUser(e, registerForm);
+        alert('CADASTRO REALIZADO COM SUCESSO');
         navigation("/");
       }
     }
