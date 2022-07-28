@@ -11,7 +11,7 @@ export const Login = () => {
 
         <Input type="text" placeholder="CPF" />
         <Input type="password" placeholder="Senha" />
-        <a href="https://www.google.com/">Esqueceu as credenciais? </a>
+        <a href="/">Esqueceu as credenciais? </a>
 
         <div className="checkboxCredentials">
           <input type="checkbox" />
@@ -21,8 +21,7 @@ export const Login = () => {
         <ButtonLarge textButton="Acessar" />
 
         <div className="registerLink">
-          Ainda não possui conta?{" "}
-          <a href="https://www.google.com/">Registre-se</a>
+          Ainda não possui conta? <a href="register">Registre-se</a>
         </div>
       </div>
     </div>

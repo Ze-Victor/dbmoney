@@ -17,27 +17,27 @@ export const SideBar = () => {
           <p class="user-account">123456789-0</p>
         </div>
       </div>
-      <a class="active" href="dashboard.html">
+      <a class="active" href="dashboard">
         <img src={DashboardIcon} alt="Dashboard icon" class="icon-sidebar" />
         Dashboard
       </a>
-      <a href="deposito.html">
+      <a href="deposit">
         <img src={DepositoIcon} alt="Deposito icon" class="icon-sidebar" />
         Depósito
       </a>
-      <a href="extrato.html">
+      <a href="statement">
         <img src={ExtratoIcon} alt="Extrato icon" class="icon-sidebar" />
         Extrato
       </a>
-      <a href="pix.html">
+      <a href="dashboard">
         <img src={PixIcon} alt="Pix icon" class="icon-sidebar" />
         Pix
       </a>
-      <a href="recarga.html">
+      <a href="dashboard">
         <img src={RecargaIcon} alt="Recarga icon" class="icon-sidebar" />
         Recarga
       </a>
-      <a href="transferencia.html">
+      <a href="dashboard">
         <img
           src={TransferenciaIcon}
           alt="Transferencia icon"
@@ -47,10 +47,10 @@ export const SideBar = () => {
       </a>
 
       <h3 class="section-sidebar">GERENCIAMENTO</h3>
-      <a href="contaconfig.html">Configurações da Conta</a>
-      <a href="sac.html">Atendimento ao Cliente</a>
+      <a href="accountconfigurations">Configurações da Conta</a>
+      <a href="dashboard">Atendimento ao Cliente</a>
       <h3 class="section-sidebar">
-        <a href="#">SAIR</a>
+        <a href="/">SAIR</a>
       </h3>
     </div>
   );
