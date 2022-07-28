@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "../../components/Input";
-import { ButtonLarge } from "../../components/Button";
+import { ButtonLarge } from "../../components/ButtonLarge";
 import "./style.css";
 
 export const Login = () => {
