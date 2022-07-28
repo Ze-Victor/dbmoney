@@ -13,51 +13,51 @@ export const SideBar = () => {
   const navigation = useNavigate();
 
   return (
-    <div class="sidebar">
-      <div class="avatar">
-        <div class="user-pic"></div>
-        <div class="user-infos">
-          <p class="user-name"></p>
-          <p class="user-account">123456789-0</p>
+    <div className="sidebar">
+      <div className="avatar">
+        <div className="user-pic"></div>
+        <div className="user-infos">
+          <p className="user-name"></p>
+          <p className="user-account">123456789-0</p>
         </div>
       </div>
-      <button class="active" onClick={() => navigation("/dashboard")}>
-        <img src={DashboardIcon} alt="Dashboard icon" class="icon-sidebar" />
+      <button className="active" onClick={() => navigation("/dashboard")}>
+        <img src={DashboardIcon} alt="Dashboard icon" className="icon-sidebar" />
         Dashboard
       </button>
       <button onClick={() => navigation("/deposit")}>
-        <img src={DepositoIcon} alt="Deposito icon" class="icon-sidebar" />
+        <img src={DepositoIcon} alt="Deposito icon" className="icon-sidebar" />
         Depósito
       </button>
       <button onClick={() => navigation("/statement")}>
-        <img src={ExtratoIcon} alt="Extrato icon" class="icon-sidebar" />
+        <img src={ExtratoIcon} alt="Extrato icon" className="icon-sidebar" />
         Extrato
       </button>
       <button onClick={() => navigation("/pix")}>
-        <img src={PixIcon} alt="Pix icon" class="icon-sidebar" />
+        <img src={PixIcon} alt="Pix icon" className="icon-sidebar" />
         Pix
       </button>
       <button onClick={() => navigation("/dashboard")}>
-        <img src={RecargaIcon} alt="Recarga icon" class="icon-sidebar" />
+        <img src={RecargaIcon} alt="Recarga icon" className="icon-sidebar" />
         Recarga
       </button>
       <button onClick={() => navigation("/dashboard")}>
         <img
           src={TransferenciaIcon}
           alt="Transferencia icon"
-          class="icon-sidebar"
+          className="icon-sidebar"
         />
         Transferência
       </button>
 
-      <h3 class="section-sidebar">GERENCIAMENTO</h3>
+      <h3 className="section-sidebar">GERENCIAMENTO</h3>
       <button onClick={() => navigation("/accountconfigurations")}>
         Configurações da Conta
       </button>
       <button onClick={() => navigation("/dashboard")}>
         Atendimento ao Cliente
       </button>
-      <h3 class="section-sidebar">
+      <h3 className="section-sidebar">
         <button onClick={() => navigation("/")}>SAIR</button>
       </h3>
     </div>

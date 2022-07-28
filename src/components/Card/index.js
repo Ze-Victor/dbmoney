@@ -1,9 +1,16 @@
 import React from "react";
 
-export const Card = () => {
+export const Card = (props, children) => {
   return (
-    <div className="containerCard">
-      <h1>Title</h1>
-    </div>
+    props.size === "sm" ?
+      <div className="card-sm">
+          {props.header}
+          <h1>{props.content}</h1>
+      </div>
+    :
+      <div className="card-md">
+        {props.header}
+        {children}
+      </div>
   );
 };

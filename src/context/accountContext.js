@@ -57,8 +57,15 @@ export const AccountProvider = ({ children }) => {
 
   const pix = (cpfSender, cpfRecipient, value) => {
     accounts.forEach((account, index) => {
-      if (account.cpf === cpfSender && account.saldo >= value) {
-        accounts[index].saldo -= parseFloat(value);
+      if (account.cpf === cpfSender) {
+        if(account.saldo >= value){
+          accounts[index].saldo -= parseFloat(value);
+          alert("PIX ENVIADO COM SUCESSO!")
+        }
+        else {
+          alert("SALDO INSUFICIENTE!")
+        }
+
       }
       if (account.cpf === cpfRecipient) {
         accounts[index].saldo += parseFloat(value);
