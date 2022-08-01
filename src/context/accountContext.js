@@ -56,18 +56,19 @@ export const AccountProvider = ({ children }) => {
   };
 
   const pix = (cpfSender, cpfRecipient, value) => {
+    let isValidPix = false;
+
     accounts.forEach((account, index) => {
       if (account.cpf === cpfSender) {
-        if(account.saldo >= value){
+        if (account.saldo >= value) {
           accounts[index].saldo -= parseFloat(value);
-          alert("PIX ENVIADO COM SUCESSO!")
+          alert("PIX ENVIADO COM SUCESSO!");
+          isValidPix = true;
+        } else {
+          alert("SALDO INSUFICIENTE!");
         }
-        else {
-          alert("SALDO INSUFICIENTE!")
-        }
-
       }
-      if (account.cpf === cpfRecipient) {
+      if (account.cpf === cpfRecipient && isValidPix) {
         accounts[index].saldo += parseFloat(value);
       }
     });

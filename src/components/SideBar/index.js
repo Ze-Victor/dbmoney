@@ -9,20 +9,24 @@ import TransferenciaIcon from "../../icons/transferencia.png";
 
 import { useNavigate } from "react-router-dom";
 
-export const SideBar = () => {
+export const SideBar = (props) => {
   const navigation = useNavigate();
 
   return (
     <div className="sidebar">
       <div className="avatar">
-        <div className="user-pic"></div>
+        <div className="user-pic">N</div>
         <div className="user-infos">
-          <p className="user-name"></p>
-          <p className="user-account">123456789-0</p>
+          <p className="user-name">NOME</p>
+          <p className="user-account">1213215</p>
         </div>
       </div>
       <button className="active" onClick={() => navigation("/dashboard")}>
-        <img src={DashboardIcon} alt="Dashboard icon" className="icon-sidebar" />
+        <img
+          src={DashboardIcon}
+          alt="Dashboard icon"
+          className="icon-sidebar"
+        />
         Dashboard
       </button>
       <button onClick={() => navigation("/deposit")}>
